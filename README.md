@@ -69,23 +69,20 @@ The system supports:
 
 ## 📁 Project Structure  
 ProjectFarmFresh/
-│── app.js
-│── package.json
-│── package-lock.json
-│── .env
-│── .gitignore
-│── README.md
-│
+├── app.js
+├── package.json
+├── package-lock.json
+├── .env
+├── .gitignore
+├── seeds/
+│   └── seed.js
 ├── data/
 │   └── products.json
-│
+├── middleware/
+│   └── auth.js
 ├── models/
 │   ├── Product.js
 │   └── User.js
-│
-├── middleware/
-│   └── auth.js
-│
 ├── public/
 │   ├── css/
 │   │   ├── about.css
@@ -95,10 +92,7 @@ ProjectFarmFresh/
 │   │   ├── explore.css
 │   │   ├── login.css
 │   │   └── style.css
-│   │
 │   ├── images/
-│   │   └── (project images)
-│   │
 │   └── js/
 │       ├── cart.js
 │       ├── checkout.js
@@ -106,35 +100,29 @@ ProjectFarmFresh/
 │       ├── explore.js
 │       ├── login.js
 │       └── main.js
-│
 ├── routes/
 │   ├── adminRoutes.js
 │   ├── authRoutes.js
 │   ├── contactRoutes.js
 │   └── productRoutes.js
-│
-├── views/
-│   ├── partials/
-│   │   ├── header.ejs
-│   │   └── footer.ejs
-│   │
-│   ├── admin/
-│   │   ├── addProduct.ejs
-│   │   ├── editProduct.ejs
-│   │   └── manageProducts.ejs
-│   │
-│   ├── about.ejs
-│   ├── cart.ejs
-│   ├── checkout.ejs
-│   ├── contact.ejs
-│   ├── explore.ejs
-│   ├── index.ejs
-│   ├── login.ejs
-│   ├── profile.ejs
-│   └── register.ejs
-│
-└── seeds/
-    └── seed.js
+└── views/
+    ├── admin/
+    │   ├── addProduct.ejs
+    │   ├── editProduct.ejs
+    │   └── manageProducts.ejs
+    ├── partials/
+    │   ├── footer.ejs
+    │   └── header.ejs
+    ├── about.ejs
+    ├── cart.ejs
+    ├── checkout.ejs
+    ├── contact.ejs
+    ├── explore.ejs
+    ├── index.ejs
+    ├── login.ejs
+    ├── profile.ejs
+    └── register.ejs
+
 ---
 
 ## 🔒 Authentication  
@@ -150,7 +138,7 @@ The login system is backed by:
 ## 👨‍💻 Contributors
 | Name                | Role                 |
 | ------------------- | -------------------- |
-| **Aryan Bhati**     | Full-Stack Developer |
+| **Aryan Bhati**     | Developer            |
 | **Prateek Rathore** | Developer            |
 | **Prakrisht Singh** | Developer            |
 
