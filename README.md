@@ -135,7 +135,6 @@ ProjectFarmFresh/
 │
 └── seeds/
     └── seed.js
-
 ---
 
 ## 🔒 Authentication  
