@@ -67,63 +67,70 @@ The system supports:
 
 ---
 
-## 📁 Project Structure  
+## 📁 Project Structure
+```text
 ProjectFarmFresh/
-├── app.js
-├── package.json
-├── package-lock.json
-├── .env
-├── .gitignore
+├── app.js                       # Main Express server file
+├── package.json                 # Project dependencies and metadata
+├── package-lock.json            # Dependency lock file
+├── .env                         # Environment variables
+├── .gitignore                   # Git ignore rules
+
 ├── seeds/
-│   └── seed.js
+│   └── seed.js                  # Seed script to populate database
+
 ├── data/
-│   └── products.json
+│   └── products.json            # Products data for seeding or testing
+
 ├── middleware/
-│   └── auth.js
+│   └── auth.js                  # Authentication middleware
+
 ├── models/
-│   ├── Product.js
-│   └── User.js
+│   ├── Product.js               # Product schema/model
+│   └── User.js                  # User schema/model
+
 ├── public/
 │   ├── css/
-│   │   ├── about.css
-│   │   ├── cart.css
-│   │   ├── checkout.css
-│   │   ├── contact.css
-│   │   ├── explore.css
-│   │   ├── login.css
-│   │   └── style.css
-│   ├── images/
+│   │   ├── about.css            # About page styles
+│   │   ├── cart.css             # Cart page styles
+│   │   ├── checkout.css         # Checkout page styles
+│   │   ├── contact.css          # Contact page styles
+│   │   ├── explore.css          # Explore page styles
+│   │   ├── login.css            # Login page styles
+│   │   └── style.css            # Global styling
+│   ├── images/                  # All static images
 │   └── js/
-│       ├── cart.js
-│       ├── checkout.js
-│       ├── contact.js
-│       ├── explore.js
-│       ├── login.js
-│       └── main.js
+│       ├── cart.js              # Cart page functionality
+│       ├── checkout.js          # Checkout functionality
+│       ├── contact.js           # Contact page JS
+│       ├── explore.js           # Explore page JS
+│       ├── login.js             # Login page JS
+│       └── main.js              # Shared/global JS
+
 ├── routes/
-│   ├── adminRoutes.js
-│   ├── authRoutes.js
-│   ├── contactRoutes.js
-│   └── productRoutes.js
+│   ├── adminRoutes.js           # Admin dashboard routes
+│   ├── authRoutes.js            # Login/Signup routes
+│   ├── contactRoutes.js         # Contact form routes
+│   └── productRoutes.js         # Product-related routes
+
 └── views/
     ├── admin/
-    │   ├── addProduct.ejs
-    │   ├── editProduct.ejs
-    │   └── manageProducts.ejs
+    │   ├── addProduct.ejs       # Add new product page
+    │   ├── editProduct.ejs      # Edit product page
+    │   └── manageProducts.ejs   # Manage products page
     ├── partials/
-    │   ├── footer.ejs
-    │   └── header.ejs
-    ├── about.ejs
-    ├── cart.ejs
-    ├── checkout.ejs
-    ├── contact.ejs
-    ├── explore.ejs
-    ├── index.ejs
-    ├── login.ejs
-    ├── profile.ejs
-    └── register.ejs
-
----
+    │   ├── footer.ejs           # Reusable footer
+    │   └── header.ejs           # Reusable header
+    ├── about.ejs                # About page
+    ├── cart.ejs                 # Cart page
+    ├── checkout.ejs             # Checkout page
+    ├── contact.ejs              # Contact page
+    ├── explore.ejs              # Explore page
+    ├── index.ejs                # Homepage
+    ├── login.ejs                # Login page
+    ├── profile.ejs              # User profile page
+    └── register.ejs             # Signup page
+```
 
 ## 🔒 Authentication  
 The login system is backed by:  
@@ -131,7 +138,28 @@ The login system is backed by:
 - Database lookup using **Mongoose**  
 - Clean session-based login state  
 - Flash alerts for feedback  
-- Automatic redirect to homepage upon successful login  
+- Automatic redirect to homepage upon successful login
+
+---
+
+## 🧪 How to Run Locally  
+
+### 1️⃣ Clone the repository  
+git clone https://github.com/AryanBhati02/ProjectFarmFresh
+
+### 2️⃣ Install dependencies
+ - npm install
+
+### 3️⃣ Configure .env
+ - MONGO_URI=your_connection_string\
+ - EMAIL_USER=your_email@gmail.com\
+ - EMAIL_PASS=your_app_password
+
+### 4️⃣ Start the server
+ - nodemon app.js
+
+- Server runs at:
+👉 http://localhost:3000
 
 ---
 
