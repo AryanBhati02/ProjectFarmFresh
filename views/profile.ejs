@@ -1,0 +1,14 @@
+<%- include("partials/header") %>
+
+<link rel="stylesheet" href="/css/style.css">
+
+<div class="container" style="padding:40px 0;">
+  <h2>Your Profile</h2>
+  <div style="background:#fff;padding:20px;border-radius:8px;border:1px solid #eee;">
+    <p><strong>Name:</strong> <%= user.name %></p>
+    <p><strong>Email:</strong> <%= user.email %></p>
+    <p><a href="/auth/logout" class="btn" style="background:green;color:#fff;padding:8px 12px;border-radius:6px;text-decoration:none;">Logout</a></p>
+  </div>
+</div>
+
+<%- include("partials/footer") %>

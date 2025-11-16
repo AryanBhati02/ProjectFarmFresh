@@ -1,0 +1,39 @@
+<%- include("partials/header") %>
+<link rel="stylesheet" href="/css/login.css">
+
+<div class="auth-wrapper">
+  <div class="auth-box">
+
+    <% if (error && error.length) { %>
+      <div class="auth-alert error"><%= error[0] %></div>
+    <% } %>
+
+    <% if (success && success.length) { %>
+      <div class="auth-alert success"><%= success[0] %></div>
+    <% } %>
+
+    <img src="/images/logo.png" class="auth-logo">
+    <h2>Welcome back!</h2>
+    <p class="muted">Enter your credentials to access your account</p>
+
+    <form action="/login" method="POST">
+      <input type="email" name="email" placeholder="Email address" required>
+      <input type="password" name="password" placeholder="Password" required>
+
+      <button class="primary">Login</button>
+    </form>
+
+    <div class="divider">OR</div>
+
+    <p class="muted">Don't have an account?
+      <a href="/register">Sign Up</a>
+    </p>
+
+  </div>
+
+  <div class="auth-image">
+    <img src="/images/login-plant.png" alt="">
+  </div>
+</div>
+
+<%- include("partials/footer") %>

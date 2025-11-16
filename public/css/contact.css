@@ -1,0 +1,107 @@
+/* MAIN LAYOUT */
+.contact-wrapper {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background: #fff;
+}
+
+/* LEFT SIDE */
+.left-box {
+    width: 45%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-box h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Form */
+.left-box label {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+.left-box input,
+.left-box textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.left-box textarea {
+    height: 110px;
+    resize: none;
+}
+
+.submit-btn {
+    width: 100%;
+    background: #1b5e20;
+    color: #fff;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    margin-top: 18px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background: #134a18;
+}
+
+/* Logo + Buttons */
+.logo-area {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.logo-area img {
+    width: 130px;
+    margin-bottom: 10px;
+}
+
+.nav-btns {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.nav-button {
+    padding: 10px 25px;
+    border: 2px solid #1b5e20;
+    border-radius: 8px;
+    color: #1b5e20;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-button:hover {
+    background: #1b5e20;
+    color: white;
+}
+
+/* RIGHT SIDE */
+.right-img {
+    width: 55%;
+    overflow: hidden;
+}
+
+.right-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

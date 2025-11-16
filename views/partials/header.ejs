@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Farm Fresh</title>
+
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <a href="/"><img src="/images/logo.png" alt="Farm Fresh Logo"></a>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search products...">
+      <button>Search</button>
+    </div>
+
+    <nav class="nav-links">
+      <a href="/about">About Us</a>
+
+      <a href="/contact">
+        <img src="/images/heart.png" class="icon"> Contact Us
+      </a>
+
+      <!-- FIXED LIVE CART COUNT -->
+      <a href="/cart" id="cartLink">
+        <img src="/images/cart.png" class="icon">
+        Cart (<span id="cartCount">0</span>)
+      </a>
+
+      <a href="/login" class="login-btn">Login</a>
+    </nav>
+  </header>
+
+<main>
+
+<!-- LIVE CART COUNT SCRIPT -->
+<script>
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let totalQty = 0;
+
+    cart.forEach(item => totalQty += item.qty);
+
+    const span = document.getElementById("cartCount");
+    if (span) span.innerText = totalQty;
+}
+
+// update immediately when page loads
+updateCartCount();
+
+// update when any Add button is clicked
+document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("add-to-cart")) {
+        setTimeout(updateCartCount, 100);
+    }
+});
+
+// make globally available
+window.updateCartCount = updateCartCount;
+</script>

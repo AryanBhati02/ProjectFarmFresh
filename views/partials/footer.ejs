@@ -1,0 +1,47 @@
+</main>
+
+<footer>
+  <div>
+    <img src="/images/logo.png" alt="Logo" style="width:100px;"><br>
+    <p>Bringing freshness directly to you.</p>
+  </div>
+  <div>
+    <h4>Account</h4>
+    <a href="/cart">Wishlist</a>
+    <a href="/cart">Cart</a>
+    <a href="/checkout">Track Order</a>
+    <a href="/checkout">Shipping Details</a>
+  </div>
+  <div>
+    <h4>Useful Links</h4>
+    <a href="/about">About Us</a>
+    <a href="/contact">Contact</a>
+    <a href="/explore">New Products</a>
+    <a href="/about#privacy">Privacy Policy</a>
+  </div>
+  <div>
+    <h4>Help Center</h4>
+    <a href="/checkout">Payments</a>
+    <a href="/checkout">Checkout</a>
+    <a href="/checkout">Shipping</a>
+    <a href="/about#privacy">Privacy Policy</a>
+  </div>
+</footer>
+
+<div class="bottom-bar">
+  © <%= new Date().getFullYear() %> Farm Fresh. All rights reserved.
+</div>
+
+<script>
+  // Update cart count in header (keeps your original behavior)
+  document.addEventListener('DOMContentLoaded', function() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartLink = document.getElementById("cartLink");
+    if (cartLink && cart.length > 0) {
+      cartLink.innerHTML = `<img src="/images/cart.png" alt="Cart" class="icon"> Cart (${cart.length})`;
+    }
+  });
+</script>
+
+</body>
+</html>

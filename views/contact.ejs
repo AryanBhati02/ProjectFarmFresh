@@ -1,0 +1,67 @@
+<%- include("partials/header") %>
+
+<link rel="stylesheet" href="/css/contact.css">
+
+<div class="contact-wrapper">
+
+    <!-- LEFT BOX -->
+    <div class="left-box">
+
+        <h2>Contact us!</h2>
+        <p class="subtitle">Give us a few details and we’ll offer the best solution.</p>
+
+        <form id="contactForm">
+
+            <label>Email address</label>
+            <input id="email" type="email" placeholder="Enter your email" required>
+
+            <label>Issue Description</label>
+            <textarea id="message" placeholder="Describe your issue in detail" required></textarea>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+
+        <div class="logo-area">
+            <img src="/images/logo.png" alt="logo">
+            <p><b>Thanks For Contacting us</b><br>We are here for help</p>
+
+            <div class="nav-btns">
+                <a href="/" class="nav-button">Home</a>
+                <a href="/about" class="nav-button">About Us</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="right-img">
+        <img src="/images/login-plant.png" alt="plant">
+    </div>
+
+</div>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    const res = await fetch("/contact/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, message })
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+        alert("Message sent successfully!");
+        document.getElementById("contactForm").reset();
+    } else {
+        alert("Failed to send message: " + data.msg);
+    }
+});
+</script>
+
+<%- include("partials/footer") %>

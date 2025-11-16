@@ -1,0 +1,112 @@
+/* Wrapper */
+.auth-wrapper {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Left Login Box */
+.auth-box {
+    width: 40%;
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.auth-logo {
+    width: 120px;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.auth-box h2 {
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 26px;
+}
+
+.auth-box .muted {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Form */
+.auth-box input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.primary {
+    width: 100%;
+    background: #0a6d0a;
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.primary:hover {
+    background: #075907;
+}
+
+/* Divider */
+.divider {
+    text-align: center;
+    margin: 20px 0;
+    color: #444;
+}
+
+/* Social Buttons */
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-outline {
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Right Image */
+.auth-image {
+    width: 60%;
+    overflow: hidden;
+}
+
+.auth-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Alerts */
+.auth-alert {
+    padding: 12px;
+    margin-bottom: 15px;
+    text-align: center;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.auth-alert.error {
+    background: #ffdddd;
+    color: #b30000;
+    border: 1px solid #b30000;
+}
+
+.auth-alert.success {
+    background: #ddffdd;
+    color: #0a630a;
+    border: 1px solid #0a630a;
+}

@@ -1,0 +1,48 @@
+<%- include("partials/header") %>
+
+<link rel="stylesheet" href="/css/checkout.css">
+
+<div class="checkout-container">
+
+    <h2>Checkout</h2>
+
+    <div id="alert-box"></div> <!-- Alert messages -->
+
+    <div class="checkout-flex">
+
+        <!-- LEFT: USER DETAILS -->
+        <div class="checkout-form">
+            <h3>Billing Details</h3>
+
+            <label>Full Name</label>
+            <input type="text" id="name" placeholder="Enter your name">
+            <p class="error-text" id="nameErr"></p>
+
+            <label>Phone Number</label>
+            <input type="text" id="phone" placeholder="Enter your phone number">
+            <p class="error-text" id="phoneErr"></p>
+
+            <label>Address</label>
+            <textarea id="address" rows="4" placeholder="Full address"></textarea>
+            <p class="error-text" id="addressErr"></p>
+
+            <button class="place-order-btn" onclick="placeOrder()">Place Order</button>
+        </div>
+
+        <!-- RIGHT: ORDER SUMMARY -->
+        <div class="checkout-summary">
+            <h3>Order Summary</h3>
+
+            <div id="summary-items"></div>
+
+            <p class="summary-total">
+                Total: <span id="summary-total-price">₹0</span>
+            </p>
+        </div>
+
+    </div>
+</div>
+
+<script src="/js/checkout.js"></script>
+
+<%- include("partials/footer") %>

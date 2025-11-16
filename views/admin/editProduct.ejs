@@ -1,0 +1,40 @@
+<%- include('../partials/header') %>
+
+<section class="container" style="padding:40px 0; max-width:700px;">
+  <h2>Edit Product</h2>
+
+  <form action="/admin/edit/<%= product._id %>" method="POST" style="margin-top:25px;">
+    <label>Name</label>
+    <input type="text" name="name" value="<%= product.name %>" required class="form-input">
+
+    <label>Price (₹)</label>
+    <input type="number" name="price" value="<%= product.price %>" required class="form-input">
+
+    <label>Category</label>
+    <input type="text" name="category" value="<%= product.category %>" required class="form-input">
+
+    <label>Stock</label>
+    <input type="number" name="stock" value="<%= product.stock %>" required class="form-input">
+
+    <label>Image Path</label>
+    <input type="text" name="image" value="<%= product.image %>" required class="form-input">
+
+    <label>Description</label>
+    <textarea name="description" rows="4" class="form-input"><%= product.description %></textarea>
+
+    <button class="btn" style="margin-top:20px;">Save Changes</button>
+  </form>
+</section>
+
+<style>
+  .form-input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+</style>
+
+<%- include('../partials/footer') %>

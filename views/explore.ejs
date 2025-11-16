@@ -1,0 +1,52 @@
+<%- include("partials/header") %>
+
+<link rel="stylesheet" href="/css/explore.css">
+
+<div class="explore-wrapper">
+
+    <!-- MOST POPULAR -->
+    <h2>Most Popular</h2>
+    <div class="scroll-row" id="popular"></div>
+
+    <!-- TWO BANNERS -->
+    <div class="dual-banners">
+        <img src="/images/banner1.png">
+        <img src="/images/banner2.png">
+    </div>
+
+    <!-- TOP SELLS -->
+    <h2>Top Sells</h2>
+    <div class="scroll-row" id="topSells"></div>
+
+    <!-- TOP RATED -->
+    <h2>Top Rated</h2>
+    <div class="scroll-row" id="topRated"></div>
+
+    <!-- TRENDING ITEMS -->
+    <h2>Trending Items</h2>
+    <div class="scroll-row" id="trending"></div>
+
+    <!-- RECENTLY ADDED -->
+    <h2>Recently Added</h2>
+    <div class="scroll-row" id="recent"></div>
+
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modalBox">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">×</span>
+        <img id="modalImg">
+        <h3 id="modalName"></h3>
+        <div class="stars" id="modalStars"></div>
+        <p class="price">
+            ₹<span id="modalPrice"></span>
+            <span class="old-price" id="modalOld"></span>
+        </p>
+        <button class="add-btn modal-btn" onclick="addToCart()">Add to Cart</button>
+    </div>
+</div>
+
+<script src="/js/explore.js"></script>
+
+<%- include("partials/footer") %>

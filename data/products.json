@@ -1,0 +1,5 @@
+[
+  { "name": "Organic Milk (1L)", "category": "Dairy", "price": 55, "unit": "1L", "image": "/images/milk.jpg", "description": "Fresh cow milk from local farms.", "stock": 50 },
+  { "name": "Farm Eggs (6 pack)", "category": "Poultry", "price": 60, "unit": "6pcs", "image": "/images/eggs.jpg", "description": "Free-range eggs.", "stock": 120 },
+  { "name": "Leafy Spinach", "category": "Vegetable", "price": 30, "unit": "250g", "image": "/images/spinach.jpg", "description": "Fresh green spinach.", "stock": 80 }
+]
