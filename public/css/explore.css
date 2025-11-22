@@ -1,4 +1,3 @@
-/* REMOVE homepage banner for explore */
 header, .banner, .hero {
     background: none !important;
     filter: none !important;
@@ -94,14 +93,12 @@ header, .banner, .hero {
     gap: 20px;
     margin: 30px 0 40px;
 }
-
-/* FIXED — Show full banner without cutting */
 .dual-banners img {
     width: 48%;
-    height: auto;              /* Let image decide height */
-    object-fit: contain;       /* Show full image */
+    height: auto;              
+    object-fit: contain;      
     border-radius: 10px;
-    background: #fff;          /* Optional clean background */
+    background: #fff;         
 }
 
 /* Modal */
