@@ -73,7 +73,7 @@ header {
   border-radius: 6px;
 }
 
-/* ---------- BANNER (with blurred translucent overlay) ---------- */
+/* ---------- BANNER ---------- */
 .banner {
   width: 100%;
   height: 360px;
@@ -85,13 +85,12 @@ header {
   overflow: hidden;
 }
 
-/* translucent overlay with blur so text is readable */
 .banner::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255,255,255,0.45); /* lighten the banner */
-  backdrop-filter: blur(1px);         /* blur effect (works in modern browsers) */
+  background: rgba(255,255,255,0.45); 
+  backdrop-filter: blur(1px);         
   -webkit-backdrop-filter: blur(1px);
   pointer-events: none;
 }
