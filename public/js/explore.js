@@ -1,4 +1,4 @@
-// Product list (local temporary data)
+// Product list
 const products = [
     { id: 1, name: "Radish 500g", price: 20, old: 30, stars: 4, img: "/images/radish.png" },
     { id: 2, name: "Potatoes 1kg", price: 25, old: 35, stars: 5, img: "/images/potato.png" },
@@ -64,7 +64,7 @@ function closeModal() {
 // LOCAL STORAGE CART SYSTEM
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-// FIXED addToCart()
+// addToCart()
 function addToCart(id) {
     const p = id ? products.find(x => x.id === id) : current;
     const found = cart.find(c => c.name === p.name);
